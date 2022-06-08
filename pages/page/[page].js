@@ -35,7 +35,6 @@ export async function getStaticProps (context) {
 
 export async function getStaticPaths () {
   const posts = await getAllPosts({ includePages: false })
-  console.log('posts', posts)
   const totalPosts = posts.length
   const totalPages = Math.ceil(totalPosts / BLOG.postsPerPage)
   return {
